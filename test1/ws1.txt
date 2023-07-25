@@ -1,0 +1,4 @@
+1. Providing a note to specify various information about the commit
+2. Something including an overview of the changes made
+3. Each time an incremental change has been made in developing existing or new features
+4. False
