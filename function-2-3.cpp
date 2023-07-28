@@ -22,5 +22,5 @@ void two_five_nine(int array[], int n) {
     }
   }
 
-  std::cout << "2:" << count2 << ";5:" << count5 << ";9:" << count9 << "\n";
+  std::cout << "2:" << count2 << ";5:" << count5 << ";9:" << count9 << ";\n";
 }
