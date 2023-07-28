@@ -6,6 +6,7 @@ extern double array_mean(int array[], int n);
 
 int main(void){
 
+    //test cases
     int arr1[5] = {1,2,3,4,5};
     cout << array_mean(arr1,5) << "\n";
 
