@@ -2,7 +2,7 @@
 
 using namespace std;
 
-extern void transform(int num, int basei, int basef);
+extern int transform(int num, int basei, int basef);
 
 int main(void){
 
