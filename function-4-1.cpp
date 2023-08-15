@@ -32,11 +32,10 @@ int secondSmallestSum(int *numbers, int length)
 
     if (length > 0)
     {
-        int minSum = 10000;
+        int *sums = new int[(length+1)*length/2];
+        int count = 0;
         int sum;
-        int prevSum = minSum;
-
-        for (int i = 0; i < length; i++)
+        for (int i = 0; i < length - 1; i++)
         {
             for (int j = 0; j < length - i; j++)
             {
@@ -45,18 +44,29 @@ int secondSmallestSum(int *numbers, int length)
                 for (int k = i; k <= i + j; k++){
                     sum += numbers[k];
                 }
-                
-                if (sum <= minSum){
-                    prevSum = minSum;
-                    minSum = sum;
+                sums[count] = sum;
+                count++;
+            }
+        }
+        bool swapped;
+        int temp;
+        for (int i = 0; i < count -1; i++){
+            swapped = false;
+            for (int j = 0; j < count-i-1; j++){
+                if (sums[j] > sums[j+1]){
+                    temp = sums[j];
+                    sums[j] = sums[j+1];
+                    sums[j+1] = temp;
+                    swapped = true;
+                }
+                if (!swapped){
+                    break;
                 }
             }
         }
-        if (minSum == prevSum){
-            return minSum;
-        }
-        return prevSum;
+
+        return sums[1];
     }
 
-    return NULL;
+    return -1;
 }

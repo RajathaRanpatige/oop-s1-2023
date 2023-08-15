@@ -7,8 +7,7 @@ extern int secondSmallestSum(int *numbers,int length);
 
 int main(void){
 
-    int* A;
-    A = readNumbers();
+    int *A = readNumbers();
 
     cout << secondSmallestSum(A,10) << "\n";
 
