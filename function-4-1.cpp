@@ -58,5 +58,5 @@ int secondSmallestSum(int *numbers, int length)
         return prevSum;
     }
 
-    return -1;
+    return NULL;
 }
