@@ -35,13 +35,13 @@ int secondSmallestSum(int *numbers, int length)
         int *sums = new int[(length+1)*length/2];
         int count = 0;
         int sum;
-        for (int i = 0; i < length - 1; i++)
+        for (int i = 0; i < length; i++)
         {
-            for (int j = 0; j < length - i; j++)
+            for (int j = i; j < length; j++)
             {
 
                 sum = 0;
-                for (int k = i; k <= i + j; k++){
+                for (int k = i; k <= j; k++){
                     sum += numbers[k];
                 }
                 sums[count] = sum;
