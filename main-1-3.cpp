@@ -7,6 +7,7 @@ extern PersonList deepCopyPersonList(PersonList pl);
 
 int main(void){
 
+    int n = 5;
     Person *people = new Person[n];
 
     PersonList list;
