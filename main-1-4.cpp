@@ -3,12 +3,20 @@
 
 using namespace std;
 
-extern PersonList createPersonList(int n);
 extern PersonList shallowCopyPersonList(PersonList pl);
 
 int main(void){
 
-    PersonList list = createPersonList(5);
+    Person *people = new Person[n];
+
+    PersonList list;
+    list.people = people;
+    list.numPeople = n;
+
+    for (int i = 0; i < n; i++){
+        list.people[i].name = "Jane Doe";
+        list.people[i].age = 1;
+    }
 
     list.people[2].name = "YOO";
     list.people[2].age = 5;
