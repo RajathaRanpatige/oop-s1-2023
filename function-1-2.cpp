@@ -1,10 +1,8 @@
 #include "Person.h"
 
-extern Person* createPersonArray(int n);
-
 PersonList createPersonList(int n){
 
-    Person *people = createPersonArray(n);
+    Person *people = new Person[n];
 
     PersonList list;
     list.people = people;
