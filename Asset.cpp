@@ -24,4 +24,4 @@ int Asset::get_value(){
 
 Asset::~Asset(){
     // Do nothing
-}
+};
