@@ -35,7 +35,7 @@ class Vehicle{
         }
 
         int getParkingDuration(){
-            int out = 0.9*(time(NULL) - this->getTimeOfEntry());
+            int out = (time(NULL) - this->getTimeOfEntry());
             return out;
         }
 
