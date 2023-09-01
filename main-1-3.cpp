@@ -7,6 +7,12 @@
 #include "Car.h"
 #include "Bus.h"
 #include "Motorbike.h"
+
+#ifdef _WIN32
+#include <Windows.h>
+#else
+#include <unistd.h>
+#endif
 using namespace std;
 
 int main(void){
@@ -20,6 +26,7 @@ int main(void){
     Vehicle E = Car(5);
 
     Vehicle F = Bus(6);
+    sleep(16);
     Vehicle G = Bus(7);
     Vehicle H = Bus(8);
 
