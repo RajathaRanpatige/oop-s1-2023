@@ -6,7 +6,7 @@
 #include "Vehicle.h"
 using namespace std;
 
-class Car : Vehicle{
+class Car : public Vehicle{
 
     public:
 
