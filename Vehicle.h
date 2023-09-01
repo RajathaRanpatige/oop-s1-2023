@@ -34,7 +34,7 @@ class Vehicle{
             return timeOfEntry;
         }
 
-        int getParkingDuration(){
+        virtual int getParkingDuration(){
             int out = (time(NULL) - this->getTimeOfEntry());
             return out;
         }
