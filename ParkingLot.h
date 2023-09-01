@@ -46,7 +46,6 @@ class ParkingLot{
                 for (int i = index; i < count - 1; i++){
                     vehicles[i] = vehicles[i+1];
                 }
-                vehicles[count - 1] = NULL;
 
                 count--;
 
