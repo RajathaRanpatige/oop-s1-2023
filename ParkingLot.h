@@ -57,10 +57,14 @@ class ParkingLot{
         int countOverstayingVehicles(int maxParkingDuration){
             int count = 0;
             for (int i = 0; i < count; i++){
-                if (time(NULL) - vehicles[i].getTimeOfEntry() > maxParkingDuration){
+                if ((int)(time(NULL) - vehicles[i].getTimeOfEntry()) > maxParkingDuration){
                     count++;
                 }
             }
             return count;
+        }
+
+        ~ParkingLot(){
+            delete[] vehicles;
         }
 };
