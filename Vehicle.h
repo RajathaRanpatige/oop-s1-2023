@@ -13,6 +13,11 @@ class Vehicle{
     public:
 
         //Constructor
+        Vehicle(){
+            ID = -1;
+            timeOfEntry = time(NULL);
+        }
+
         Vehicle(int ID){
             this->ID = ID;
             timeOfEntry = time(NULL);
