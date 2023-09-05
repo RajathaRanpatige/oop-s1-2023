@@ -24,7 +24,7 @@ class Fridge : public Appliance{
         }
         
         double getPowerConsumption(){
-            return powerRating*24*volume/100;
+            return this->get_powerRating()*24*volume/100;
         }
 
 };

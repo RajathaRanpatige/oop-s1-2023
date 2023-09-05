@@ -24,7 +24,7 @@ class TV : public Appliance{
         }
         
         double getPowerConsumption(){
-            return powerRating*screenSize/10;
+            return this->get_powerRating()*screenSize/10;
         }
 
 };
