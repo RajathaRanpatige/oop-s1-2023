@@ -16,10 +16,10 @@ class Fridge : public Appliance{
             this->volume = volume;
         }
 
-        double get_volume(){
+        double getVolume(){
             return volume;
         }
-        void set_volume(double volume){
+        void setVolume(double volume){
             this->volume = volume;
         }
         

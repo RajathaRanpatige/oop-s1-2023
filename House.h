@@ -46,6 +46,9 @@ class House{
             return total;
         }
 
-}
+        ~House(){
+            delete[] appliances;
+        }
+};
 
 #endif
