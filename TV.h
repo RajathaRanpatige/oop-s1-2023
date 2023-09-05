@@ -16,10 +16,10 @@ class TV : public Appliance{
             this->screenSize = screenSize;
         }
 
-        double get_screenSize(){
+        double getScreenSize(){
             return screenSize;
         }
-        void set_screenSize(double screenSize){
+        void setScreenSize(double screenSize){
             this->screenSize = screenSize;
         }
         
