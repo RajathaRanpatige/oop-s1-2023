@@ -4,7 +4,7 @@
 #include "AirFleet.h"
 
 AirFleet::AirFleet(){
-    fleet = new AirVehicle**[5];
+    fleet = new AirVehicle*[5];
 
     fleet[0] = new Airplane(20,10);
     fleet[1] = new Helicopter(10000,"BlackHawk");
