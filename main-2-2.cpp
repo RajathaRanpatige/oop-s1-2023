@@ -11,6 +11,10 @@ int main(void){
     A.fly(65,120);
 
     cout << A.get_fuel() << " " << A.get_numberOfFlights() << "\n";
+
+    cout << A.get_numPassengers() << "\n";
+    A.reducePassengers(5);
+    cout << A.get_numPassengers() << "\n";
     
     return 0;
 }

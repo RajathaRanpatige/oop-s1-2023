@@ -1,8 +1,6 @@
 #include "AirVehicle.h"
 #include "Airplane.h"
-#include <math.h>
-
-using namespace std;
+#include <cmath>
 
 Airplane::Airplane(){}
 
@@ -34,5 +32,5 @@ int Airplane::get_numPassengers(){
 
 void Airplane::reducePassengers(int x){
     numPassengers -= x;
-    numPassengers = max(0,numPassengers);
+    numPassengers = fmax(0,numPassengers);
 }
