@@ -2,6 +2,8 @@
 #include "Airplane.h"
 #include <math.h>
 
+using namespace std;
+
 Airplane::Airplane(){}
 
 Airplane::Airplane(int w, int p) : AirVehicle(w){

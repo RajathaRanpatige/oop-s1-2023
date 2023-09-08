@@ -3,8 +3,6 @@
 
 #include "AirVehicle.h"
 
-using namespace std;
-
 class Airplane : public AirVehicle {
 
     int numPassengers;

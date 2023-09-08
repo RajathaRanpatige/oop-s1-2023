@@ -6,7 +6,20 @@
 #include "Airplane.h"
 
 class AirFleet {
-    
-}
+
+    AirVehicle **fleet;
+
+    public:
+
+        AirFleet();
+
+        AirVehicle **get_fleet(){
+            return fleet;
+        }
+
+        ~AirFleet(){
+            delete[] fleet;
+        }
+};
 
 #endif
