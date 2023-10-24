@@ -17,8 +17,6 @@ class Game{
 
     public:
         vector<GameEntity*> entities;
-        int NumShips;
-        int NumMines;
 
         vector<GameEntity*> get_entities(){
             return entities;
@@ -28,8 +26,6 @@ class Game{
         }
 
         vector<GameEntity*> initGame(int numShips, int numMines, int gridWidth, int gridHeight){
-            NumShips =numShips;
-            NumMines = numMines;
             for (int i = 0; i < numShips; i++){
                 entities.push_back(new Ship(Utils::generateRandomPos(gridWidth,gridHeight)));
             }
@@ -40,11 +36,38 @@ class Game{
         }
 
         void gameLoop(int maxIterations, double mineDistanceThreshold){
-            for (int i = 0; i < NumShips; i++){
-                
-            }
-        }
+            
+            int count = 0;
 
+            while (count <= maxIterations){
+
+                for (int i = 0; i < (int)entities.size(); i++){
+                    if (entities[i]->type == 'S'){
+                        entities[i]->move(1,0);
+                    }
+                }
+
+                for (int i = 0; i < (int)entities.size(); i++){
+
+                    if (entities[i]->type == 'M'){
+
+                        for (int j = 0; j < (int)entities.size(); j++){
+                            if (entities[j]->type == 'S'){
+                                
+                                if (Utils::calculateDistance(entities[i]->position,entities[j]->position)){
+                                    Explosion exp = entities[i]->explode();
+                                    exp.apply(entities[j]);
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+            }
+
+            
+        }
 };
 
 #endif
