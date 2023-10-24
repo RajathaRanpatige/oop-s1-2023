@@ -17,6 +17,10 @@ class GameEntity{
             this->type = type;
         }
 
+        void setPos(tuple<int,int> Pos){
+            position = Pos;
+        }
+
         tuple<int,int> getPos(){
             return position;
         }

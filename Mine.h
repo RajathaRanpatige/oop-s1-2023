@@ -13,6 +13,7 @@ class Mine : public GameEntity{
     public:
 
         Mine(int x, int y) : GameEntity(x,y,'M'){}
+        Mine(tuple<int,int> pos) : GameEntity(get<0>(pos),get<1>(pos),'M'){}
 
         Explosion explode(){
             type = 'X';
