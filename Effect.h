@@ -2,7 +2,6 @@
 #define EFFECT_H
 
 #include <iostream>
-#include <tuple>
 #include "GameEntity.h"
 
 using namespace std;

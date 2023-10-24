@@ -14,7 +14,7 @@ class GameEntity{
 
         GameEntity(int x, int y, char type){
             position = {x,y};
-            type = type;
+            this->type = type;
         }
 
         tuple<int,int> getPos(){

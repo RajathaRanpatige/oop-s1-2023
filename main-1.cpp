@@ -3,6 +3,9 @@
 #include "GameEntity.h"
 #include "Effect.h"
 #include "Utils.h"
+#include "Explosion.h"
+#include "Ship.h"
+#include "Mine.h"
 
 using namespace std;
 
