@@ -34,6 +34,9 @@ class Spot{
             this->category = category;
         }
 
+        void print(){
+            cout << category << " : (" << get<0>(location) << "," << get<1>(location) <<")\n";
+        }
 };
 
 #endif
