@@ -17,7 +17,7 @@ class Mine : public GameEntity{
 
         Explosion explode(){
             type = 'X';
-            return Explosion(get<0>(position),get<1>(position));
+            return Explosion(get<0>(position), get<1>(position));
         }
 };
 

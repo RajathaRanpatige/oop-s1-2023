@@ -1,8 +1,5 @@
 #include <iostream>
 #include <tuple>
-#include "GameEntity.h"
-#include "Effect.h"
-#include "Utils.h"
 #include "Explosion.h"
 #include "Ship.h"
 #include "Mine.h"
@@ -13,6 +10,9 @@ int main() {
 
     Ship ship = Ship(50,50);
     Mine mine = Mine(45,35);
+
+    cout << "Ship : (" << get<0>(ship.position) << "," << get<1>(ship.position) << ") : " << ship.type << "\n";
+    cout << "Mine : (" << get<0>(mine.position) << "," << get<1>(mine.position) << ") : " << mine.type << "\n";
 
     Explosion ripBozo = mine.explode();
     ripBozo.apply(ship);

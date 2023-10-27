@@ -15,7 +15,7 @@ class Ship : public GameEntity{
         Ship(tuple<int,int> pos) : GameEntity(get<0>(pos),get<1>(pos),'S'){}
 
         void move(int dx, int dy){
-            position = {get<0>(position)+dx,get<1>(position)+dy};
+            position = {get<0>(position)+dx, get<1>(position)+dy};
         }
 };
 
