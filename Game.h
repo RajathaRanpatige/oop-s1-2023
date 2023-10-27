@@ -59,7 +59,7 @@ class Game{
                             if (entities[j]->type == 'S'){
                                 
                                 if (Utils::calculateDistance(entities[i]->position,entities[j]->position) <= mineDistanceThreshold){
-                                    Explosion exp = static_cast<Mine*>(entities[i])->explode();
+                                    Explosion exp = ((Mine*)(entities[i]))->explode();
                                     exp.apply(*entities[j]);
                                     break;
                                 }
