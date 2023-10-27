@@ -28,6 +28,10 @@ class GameEntity{
         char getType(){
             return type;
         }
+
+        void printData(){
+            cout << type << " : pos(" << get<0>(position) << "," << get<1>(position) << ")\n";
+        }
 };
 
 #endif

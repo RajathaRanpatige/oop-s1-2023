@@ -12,16 +12,19 @@ using namespace std;
 
 int main() {
 
-    Ship ship = Ship(50,50);
-    Mine mine = Mine(45,35);
+    Game test;
+    vector<GameEntity*> entities = test.initGame(5,2,100,100);
 
-    Explosion ripBozo = mine.explode();
-    ripBozo.apply(ship);
+    for (int i = 0; i < entities.size(); i++){
+        entities[i]->printData();
+    }
 
-    cout << "Ship : (" << get<0>(ship.position) << "," << get<1>(ship.position) << ") : " << ship.type << "\n";
-    cout << "Mine : (" << get<0>(mine.position) << "," << get<1>(mine.position) << ") : " << mine.type << "\n";
-    cout << "Explosion : (" << get<0>(ripBozo.position) << "," << get<1>(ripBozo.position) << ") : " << ripBozo.type << "\n";
+    test.gameLoop(20,10);
+    cout << endl;
 
+    for (int i = 0; i < entities.size(); i++){
+        entities[i]->printData();
+    }
 
     return 0;
 }
